@@ -25,3 +25,25 @@ const preencherFormulario = (endereco) =>{
     document.getElementById('localidade').value = endereco.localidade;
     document.getElementById('uf').value = endereco.uf;
 }
+
+
+//Função para consumo de APIViaCEP
+const pesquisarCep = async() => {
+    limparFormulario();
+    const url = `https://viacep.com.br/ws/${cep.value}/json/`;
+    if(cepValido(cep.value)){
+        const dados = await fetch(url);
+        const addres = await dados.json();
+
+        if(addres.hasOwnProperty('erro')){
+            alert('CEP não encontrado');
+        }else{
+            preencherFormulario(addres);
+        }
+    }else{
+        alert('CEP incorreto');
+    }
+}
+
+// Executa a ação de preenchimento do formulario ao deixar o campo do CEP
+document.getElementById('cep').addEventListener('focusout', pesquisarCep);
