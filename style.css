@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400&display=swap');
+ 
+body {
+    font-family: 'Saira Condensed', sans-serif;
+    text-align: center;
+    background-image: url('fundorosa.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 120%;
+}
+
+.box {
+    width:300px;
+    margin:0 auto;
+    background-color:rgba(250, 125, 187, 0);
+    padding:0px 15px 10px 8px;
+    margin-top: 120px;
+}
+ 
+.box .input {
+    width:100%;
+    margin-bottom: 10px;
+}
+.input{
+    height: 20px;
+    size-adjust: 500px;
+}
+form{
+    width: 98%;
+}
