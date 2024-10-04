@@ -13,6 +13,7 @@ const estado = document.querySelector('#estado');
 const message = document.querySelector('#message');
 }
  
+
 // Verificar se o CEP é válido
 cep.addEventListener('focusout', async () => {
  
